@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1",
+  "version": "0.3.3",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "main": "index.ts",
@@ -9,8 +9,8 @@
   },
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && tsc --outDir build/src && node scripts/build-package.js",
-    "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/cjs --source-maps",
-    "build:esm": "NODE_ENV=production BABEL_ENV=esm babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/esm --source-maps"
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/cjs --source-maps",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel src --presets=./scripts/babel-preset.js --extensions .ts,.tsx --ignore src/**/*.specs.tsx --out-dir build/esm --source-maps"
   },
   "prettier": {
     "printWidth": 80,
@@ -19,7 +19,7 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@VietThang03/jobber-lib",
+  "name": "@jobber-lib",
   "author": "Viet Thang Dev",
   "repository": {
     "type": "git",
