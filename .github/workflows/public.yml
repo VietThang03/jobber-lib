@@ -7,7 +7,7 @@ on:
     branches: [master]
 jobs:
   publish:
-    runs-on: window-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
@@ -24,4 +24,4 @@ jobs:
       - run: npm publish
         working-directory: ./build
          env:
-         NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
