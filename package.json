@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "0.3.4",
   "license": "MIT",
   "types": "./src/index.d.ts",
   "main": "index.ts",
@@ -19,7 +19,7 @@
     "trailingComma": "es5"
   },
   "keywords": [],
-  "name": "@jobber-lib",
+  "name": "@VietThang03/jobber-lib",
   "author": "Viet Thang Dev",
   "repository": {
     "type": "git",
